@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="cF6-MZ-h5e">
+            <objects>
+                <viewController id="bfe-Mg-AHr" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Muu-og-HrR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ePm-Py-mf0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="profile" id="Nmr-ri-ZFZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7VZ-B8-PJD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-365.21739130434787" y="316.07142857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="q5z-eL-rfX">
+            <objects>
+                <viewController id="zsc-X9-UpR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ver-cV-XCh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Idn-j8-hvC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="feed" id="4za-aB-UOR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nCC-ti-QiE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1017" y="317"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="rmy-YB-DJt">
+            <objects>
+                <tabBarController storyboardIdentifier="Tabbar" id="XPQ-ia-2b5" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Agn-4w-7CJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="zsc-X9-UpR" kind="relationship" relationship="viewControllers" id="fhG-U6-3sR"/>
+                        <segue destination="bfe-Mg-AHr" kind="relationship" relationship="viewControllers" id="zbf-pO-99x"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o2k-ff-UqP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-670" y="-405"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="feed" width="20" height="20"/>
+        <image name="profile" width="24.333333969116211" height="20"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
