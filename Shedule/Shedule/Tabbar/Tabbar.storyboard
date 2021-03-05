@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="cF6-MZ-h5e">
             <objects>
-                <viewController id="bfe-Mg-AHr" sceneMemberID="viewController">
+                <viewController id="bfe-Mg-AHr" customClass="SettingsViewController" customModule="Shedule" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Muu-og-HrR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,10 +24,10 @@
             </objects>
             <point key="canvasLocation" x="-365.21739130434787" y="316.07142857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Schedule View Controller-->
         <scene sceneID="q5z-eL-rfX">
             <objects>
-                <viewController id="zsc-X9-UpR" sceneMemberID="viewController">
+                <viewController id="zsc-X9-UpR" customClass="ScheduleViewController" customModule="Shedule" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ver-cV-XCh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,10 +40,10 @@
             </objects>
             <point key="canvasLocation" x="-1017" y="317"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tabbar Controller-->
         <scene sceneID="rmy-YB-DJt">
             <objects>
-                <tabBarController storyboardIdentifier="Tabbar" id="XPQ-ia-2b5" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="Tabbar" id="XPQ-ia-2b5" customClass="TabbarController" customModule="Shedule" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Agn-4w-7CJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

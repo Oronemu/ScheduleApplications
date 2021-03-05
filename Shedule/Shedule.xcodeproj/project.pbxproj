@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9804332525F2C768005EDEEF /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9804332425F2C768005EDEEF /* TabbarController.swift */; };
 		9813AF4325F14D010077FA3A /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9813AF4225F14D010077FA3A /* Tabbar.storyboard */; };
+		984052F025F2CAA300BB719B /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984052EF25F2CAA300BB719B /* ScheduleViewController.swift */; };
+		984052F425F2CACD00BB719B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984052F325F2CACD00BB719B /* SettingsViewController.swift */; };
 		98C7277C25F13AB500D56261 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C7277B25F13AB500D56261 /* AppDelegate.swift */; };
 		98C7277E25F13AB500D56261 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C7277D25F13AB500D56261 /* SceneDelegate.swift */; };
 		98C7278025F13AB500D56261 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C7277F25F13AB500D56261 /* ViewController.swift */; };
@@ -17,7 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9804332425F2C768005EDEEF /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		9813AF4225F14D010077FA3A /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
+		984052EF25F2CAA300BB719B /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		984052F325F2CACD00BB719B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		98C7277825F13AB500D56261 /* Shedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98C7277B25F13AB500D56261 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98C7277D25F13AB500D56261 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,9 +66,28 @@
 		9813AF4125F14CB10077FA3A /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
+				984052ED25F2CA1D00BB719B /* schedule */,
+				984052EE25F2CA3200BB719B /* settings */,
 				9813AF4225F14D010077FA3A /* Tabbar.storyboard */,
+				9804332425F2C768005EDEEF /* TabbarController.swift */,
 			);
 			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		984052ED25F2CA1D00BB719B /* schedule */ = {
+			isa = PBXGroup;
+			children = (
+				984052EF25F2CAA300BB719B /* ScheduleViewController.swift */,
+			);
+			path = schedule;
+			sourceTree = "<group>";
+		};
+		984052EE25F2CA3200BB719B /* settings */ = {
+			isa = PBXGroup;
+			children = (
+				984052F325F2CACD00BB719B /* SettingsViewController.swift */,
+			);
+			path = settings;
 			sourceTree = "<group>";
 		};
 		98C7276F25F13AB500D56261 = {
@@ -165,9 +190,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				984052F025F2CAA300BB719B /* ScheduleViewController.swift in Sources */,
 				98C7278025F13AB500D56261 /* ViewController.swift in Sources */,
+				9804332525F2C768005EDEEF /* TabbarController.swift in Sources */,
 				98C7277C25F13AB500D56261 /* AppDelegate.swift in Sources */,
 				98C7277E25F13AB500D56261 /* SceneDelegate.swift in Sources */,
+				984052F425F2CACD00BB719B /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
