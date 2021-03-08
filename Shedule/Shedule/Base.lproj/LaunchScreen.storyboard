@@ -16,17 +16,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoadingIcon" translatesAutoresizingMaskIntoConstraints="NO" id="OWx-ku-fqN">
-                                <rect key="frame" x="117" y="358" width="180" height="180"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoadingScreenpng" translatesAutoresizingMaskIntoConstraints="NO" id="IES-yw-1qC">
+                                <rect key="frame" x="51" y="363" width="313" height="170"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OWx-ku-fqN" secondAttribute="bottom" constant="324" id="2et-dX-iou"/>
-                            <constraint firstItem="OWx-ku-fqN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="314" id="3x7-V0-Fyh"/>
-                            <constraint firstItem="OWx-ku-fqN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="117" id="R8e-FU-QDR"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OWx-ku-fqN" secondAttribute="trailing" constant="117" id="tHL-CU-4y9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IES-yw-1qC" secondAttribute="bottom" constant="329" id="ejJ-yg-uyh"/>
+                            <constraint firstItem="IES-yw-1qC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="319" id="obW-dk-qmG"/>
+                            <constraint firstItem="IES-yw-1qC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="51" id="rhi-he-QZA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IES-yw-1qC" secondAttribute="trailing" constant="50" id="txr-vJ-TD5"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -36,7 +36,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LoadingIcon" width="512" height="512"/>
+        <image name="LoadingScreenpng" width="1910" height="544"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

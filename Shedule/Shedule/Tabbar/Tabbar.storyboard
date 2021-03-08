@@ -8,23 +8,75 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Settings View Controller-->
+        <!--Настройки-->
         <scene sceneID="cF6-MZ-h5e">
             <objects>
                 <viewController id="bfe-Mg-AHr" customClass="SettingsViewController" customModule="Shedule" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Muu-og-HrR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dnl-Hw-zXC">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="70" id="jwW-uy-wir" customClass="SettingsTableViewCell" customModule="Shedule" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jwW-uy-wir" id="92I-gX-uu8">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="6e4-sn-jJU">
+                                                    <rect key="frame" x="10" y="24.5" width="25" height="20"/>
+                                                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="EiX-T1-Jgt"/>
+                                                        <constraint firstAttribute="width" constant="25" id="LEz-gu-Snt"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rc0-An-zbx">
+                                                    <rect key="frame" x="50" y="24.5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="rc0-An-zbx" firstAttribute="centerY" secondItem="92I-gX-uu8" secondAttribute="centerY" id="0k3-Ma-Hmo"/>
+                                                <constraint firstItem="6e4-sn-jJU" firstAttribute="centerY" secondItem="92I-gX-uu8" secondAttribute="centerY" id="2pU-xR-gUp"/>
+                                                <constraint firstItem="6e4-sn-jJU" firstAttribute="leading" secondItem="92I-gX-uu8" secondAttribute="leading" constant="10" id="Zui-oi-BAV"/>
+                                                <constraint firstItem="rc0-An-zbx" firstAttribute="leading" secondItem="6e4-sn-jJU" secondAttribute="trailing" constant="15" id="lik-3Q-qaf"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="menuName" destination="rc0-An-zbx" id="cz3-DR-UyT"/>
+                                            <outlet property="pic" destination="6e4-sn-jJU" id="Ael-r4-0lz"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="bfe-Mg-AHr" id="tO4-LS-A3s"/>
+                                    <outlet property="delegate" destination="bfe-Mg-AHr" id="82F-ww-MS1"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ePm-Py-mf0"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="Dnl-Hw-zXC" firstAttribute="trailing" secondItem="ePm-Py-mf0" secondAttribute="trailing" id="Vlk-Us-h5D"/>
+                            <constraint firstItem="Dnl-Hw-zXC" firstAttribute="top" secondItem="ePm-Py-mf0" secondAttribute="top" id="f1H-Zi-Qcf"/>
+                            <constraint firstItem="Dnl-Hw-zXC" firstAttribute="leading" secondItem="ePm-Py-mf0" secondAttribute="leading" id="weq-lU-XX3"/>
+                            <constraint firstItem="Dnl-Hw-zXC" firstAttribute="bottom" secondItem="ePm-Py-mf0" secondAttribute="bottom" id="ydT-nt-YFy"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="profile" id="Nmr-ri-ZFZ"/>
+                    <tabBarItem key="tabBarItem" title="Настройки" image="settings" id="Nmr-ri-ZFZ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7VZ-B8-PJD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-365.21739130434787" y="316.07142857142856"/>
         </scene>
-        <!--Schedule View Controller-->
+        <!--Расписание-->
         <scene sceneID="q5z-eL-rfX">
             <objects>
                 <viewController id="zsc-X9-UpR" customClass="ScheduleViewController" customModule="Shedule" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,9 +84,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Idn-j8-hvC"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="feed" id="4za-aB-UOR"/>
+                    <tabBarItem key="tabBarItem" title="Расписание" image="feed" id="4za-aB-UOR"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nCC-ti-QiE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -59,11 +111,19 @@
             <point key="canvasLocation" x="-670" y="-405"/>
         </scene>
     </scenes>
+    <color key="tintColor" systemColor="systemGray2Color"/>
     <resources>
         <image name="feed" width="20" height="20"/>
-        <image name="profile" width="24.333333969116211" height="20"/>
+        <image name="info" catalog="system" width="93" height="128"/>
+        <image name="settings" width="24.333333969116211" height="20"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
