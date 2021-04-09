@@ -2963,6 +2963,11 @@ css-in-js-utils@^2.0.0:
     hyphenate-style-name "^1.0.2"
     isobject "^3.0.1"
 
+current-week-number@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/current-week-number/-/current-week-number-1.0.7.tgz#567278aeb5fe58decb150b9ac864f93dce4ed972"
+  integrity sha1-VnJ4rrX+WN7LFQuayGT5Pc5O2XI=
+
 dayjs@^1.8.15:
   version "1.10.4"
   resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.10.4.tgz#8e544a9b8683f61783f570980a8a80eaf54ab1e2"

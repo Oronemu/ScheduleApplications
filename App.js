@@ -4,6 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import firebase from 'firebase';
 import 'firebase/firestore';
 import apiKeys from './config/keys';
+import currentWeekNumber from 'current-week-number'
 
 export default function App() {
   const [state, setState] = useState ({
@@ -23,8 +24,13 @@ export default function App() {
     console.log("Firebase connected");
     firebase.initializeApp(apiKeys.firebaseConfig);
     fetchData();
+    if ((currentWeekNumber() + (currentWeekNumber("12/31/2020") - currentWeekNumber('08/30/2020'))) % 2 === 1) {
+      setState({ wChoice: true })
+    }
+    let d = new Date();
+    let dayArr = [1, 1, 2, 3, 4, 5, 1];
+    setState({ selectedDay: dayArr[d.getDay()] })
   }
-  console.log(state.lessons);
   return (
     <View>
       
