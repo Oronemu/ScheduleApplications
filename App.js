@@ -1,40 +1,67 @@
+// service stuff
 import { StatusBar } from 'expo-status-bar';
-import React, {useState} from 'react';
+import React, { useState, Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import firebase from 'firebase';
 import 'firebase/firestore';
 import apiKeys from './config/keys';
-import currentWeekNumber from 'current-week-number'
+import currentWeekNumber from 'current-week-number';
 
-export default function App() {
-  const [state, setState] = useState ({
-    gChoice: false,
-    wChoice: false,
-    lessons: [],
-    selectedDay: 1
-  })
+// components
+import Table from './components/Table/Table';
 
-  const fetchData = async () => {
-    const db = firebase.firestore();
-    const data = await db.collection('lessons').get();
-    setState({ lessons: data.docs.map((doc) => doc.data()) });
-  };
 
-  if (!firebase.apps.length) {
-    console.log("Firebase connected");
-    firebase.initializeApp(apiKeys.firebaseConfig);
-    fetchData();
-    if ((currentWeekNumber() + (currentWeekNumber("12/31/2020") - currentWeekNumber('08/30/2020'))) % 2 === 1) {
-      setState({ wChoice: true })
+export class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      gChoice: false,
+      wChoice: false,
+      lessons: [],
+      selectedDay: 1
     }
-    let d = new Date();
-    let dayArr = [1, 1, 2, 3, 4, 5, 1];
-    setState({ selectedDay: dayArr[d.getDay()] })
   }
-  return (
-    <View>
-      
-      <StatusBar style="auto" />
-    </View>
-  );
+
+  componentDidMount() { 
+    const fetchData = async () => {
+      const db = firebase.firestore();
+      const data = await db.collection('lessons').get();
+      this.setState({ lessons: data.docs.map((doc) => doc.data()) });
+    };
+
+    if (!firebase.apps.length) {
+      console.log("Firebase connected");
+      firebase.initializeApp(apiKeys.firebaseConfig);
+      fetchData();
+      if ((currentWeekNumber() + (currentWeekNumber("12/31/2020") - currentWeekNumber('08/30/2020'))) % 2 === 1) {
+        this.setState({ wChoice: true })
+      }
+      let d = new Date();
+      let dayArr = [1, 1, 2, 3, 4, 5, 1];
+      this.setState({ selectedDay: dayArr[d.getDay()] })
+    }
+  }
+
+  groupHandler = () => {
+    this.setState((prevState) => {
+      return { gChoice: !prevState.gChoice }
+    })
+  }
+
+  weekHandler = () => {
+    this.setState((prevState) => {
+      return { wChoice: !prevState.wChoice }
+    })
+  }
+  render() {
+    return (
+      <View>
+        <Table data={this.state.lessons} group={this.state.gChoice} week={this.state.wChoice} days={this.state.selectedDay} />
+        <StatusBar style="auto" />
+      </View>
+    );
+  }
+
 }
+
+export default App;

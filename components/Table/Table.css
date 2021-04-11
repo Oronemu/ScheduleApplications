@@ -1,0 +1,73 @@
+.singularLesson {
+    padding: 5px 10px;
+}
+
+table {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 16px;
+    border-collapse: collapse;
+    text-align: center;
+    min-height: 187px;
+}
+
+tr:first-child>td:first-child {
+    border-radius: 10px 0px 0 0;
+}
+
+tr:first-child>td:last-child {
+    border-radius: 0 10px 0 0;
+}
+
+tr:last-child td:first-child {
+    border-radius: 0 0 0 10px;
+}
+
+tr:last-child td:last-child {
+    border-radius: 0 0 10px 0;
+}
+
+td {
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: white;
+    background: rgb(224, 224, 224);
+    padding: 10px 20px;
+    min-width: 100px;
+    max-width: 100px;
+    word-wrap: break-word;
+}
+
+td:first-child {
+    background: black;
+    border-width: 0 1px 0 0;
+    color: white;
+}
+
+td:first-child[type="Лабораторная"] {
+    background: linear-gradient(to left, rgb(96, 150, 250), rgb(36, 98, 211));
+    color: white;
+}
+
+td:first-child[type="Практика"] {
+    background: linear-gradient(to left, rgb(85, 85, 204), rgb(28, 28, 168));
+    color: white;
+}
+
+td:first-child[type="Лекция"] {
+    background: linear-gradient(to left, rgb(253, 59, 59), rgb(199, 16, 16));
+    color: white;
+}
+
+td:first-child[type="Семинар"] {
+    background: linear-gradient(to left, rgb(255, 137, 59), rgb(206, 89, 11));
+    color: white;
+}
+
+td:nth-child(2) {
+    width: 70%;
+}
+
+.tableWrapper {
+  width: 100%;
+  /* flex-basis: auto; */
+}
