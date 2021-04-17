@@ -51,25 +51,37 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func configure() {
+        let storyboard = UIStoryboard(name: "Settings", bundle: nil)
+        
         models.append(Section(title: "Функционал", option: [
             .staticCell(model: SettingsOption(tittle: "Уведомления", icon: UIImage(systemName: "bell"), iconBackgroundColor: .systemYellow) {
+                let viewcontroller = storyboard.instantiateViewController(withIdentifier: "Notifications")
+                self.navigationController?.pushViewController(viewcontroller, animated: true)
             }),
             .staticCell(model:SettingsOption(tittle: "События", icon: UIImage(systemName: "calendar"), iconBackgroundColor: .systemBlue) {
+                let viewcontroller = storyboard.instantiateViewController(withIdentifier: "Events")
+                self.navigationController?.pushViewController(viewcontroller, animated: true)
             })
         ]))
         
         models.append(Section(title: "Интерактив", option: [
             .staticCell(model:SettingsOption(tittle: "Преподаватели", icon: UIImage(systemName: "graduationcap"), iconBackgroundColor: .systemOrange) {
+                let viewcontroller = storyboard.instantiateViewController(withIdentifier: "Teachers")
+                self.navigationController?.pushViewController(viewcontroller, animated: true)
             }),
             
             .staticCell(model:SettingsOption(tittle: "Карта ВУЗа", icon: UIImage(systemName: "map"), iconBackgroundColor: .systemGreen) {
+                let viewcontroller = storyboard.instantiateViewController(withIdentifier: "SUMap")
+                self.navigationController?.pushViewController(viewcontroller, animated: true)
             })
         ]))
         
         models.append(Section(title: "Оформление", option: [
             .staticCell(model:SettingsOption(tittle: "Внешний вид", icon: UIImage(systemName: "iphone"), iconBackgroundColor: .systemRed) {
+                let viewcontroller = storyboard.instantiateViewController(withIdentifier: "Appearance")
+                self.navigationController?.pushViewController(viewcontroller, animated: true)
             }),
-            .switchCell(model: SettingsSwitchOption(tittle: "Темная тема", icon: UIImage(systemName: "pencil"), iconBackgroundColor: .black, handler: {
+            .switchCell(model: SettingsSwitchOption(tittle: "Темная тема", icon: UIImage(systemName: "moon"), iconBackgroundColor: .black, handler: {
                 
             }, isOn: false))
         ]))

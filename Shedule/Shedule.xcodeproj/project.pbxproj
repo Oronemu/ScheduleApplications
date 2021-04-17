@@ -12,6 +12,12 @@
 		9813AF4325F14D010077FA3A /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9813AF4225F14D010077FA3A /* Tabbar.storyboard */; };
 		984052F025F2CAA300BB719B /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984052EF25F2CAA300BB719B /* ScheduleViewController.swift */; };
 		984052F425F2CACD00BB719B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984052F325F2CACD00BB719B /* SettingsViewController.swift */; };
+		984FB0AC262B528200F745D7 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 984FB0AB262B528200F745D7 /* Settings.storyboard */; };
+		984FB0AF262B52EF00F745D7 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984FB0AE262B52EF00F745D7 /* NotificationsViewController.swift */; };
+		984FB0B2262B530800F745D7 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984FB0B1262B530800F745D7 /* EventsViewController.swift */; };
+		984FB0B5262B531100F745D7 /* TeachersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984FB0B4262B531100F745D7 /* TeachersViewController.swift */; };
+		984FB0B8262B532100F745D7 /* SUMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984FB0B7262B532100F745D7 /* SUMapViewController.swift */; };
+		984FB0BB262B532E00F745D7 /* AppearanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984FB0BA262B532E00F745D7 /* AppearanceViewController.swift */; };
 		98A2BD4D25FD378E006DF79D /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A2BD4C25FD378E006DF79D /* SwitchTableViewCell.swift */; };
 		98C7277C25F13AB500D56261 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C7277B25F13AB500D56261 /* AppDelegate.swift */; };
 		98C7277E25F13AB500D56261 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C7277D25F13AB500D56261 /* SceneDelegate.swift */; };
@@ -27,6 +33,12 @@
 		9813AF4225F14D010077FA3A /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
 		984052EF25F2CAA300BB719B /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		984052F325F2CACD00BB719B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		984FB0AB262B528200F745D7 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		984FB0AE262B52EF00F745D7 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		984FB0B1262B530800F745D7 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		984FB0B4262B531100F745D7 /* TeachersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachersViewController.swift; sourceTree = "<group>"; };
+		984FB0B7262B532100F745D7 /* SUMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUMapViewController.swift; sourceTree = "<group>"; };
+		984FB0BA262B532E00F745D7 /* AppearanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceViewController.swift; sourceTree = "<group>"; };
 		98A2BD4C25FD378E006DF79D /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
 		98C7277825F13AB500D56261 /* Shedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98C7277B25F13AB500D56261 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,11 +101,57 @@
 		984052EE25F2CA3200BB719B /* settings */ = {
 			isa = PBXGroup;
 			children = (
+				984FB0A5262B521B00F745D7 /* Notifications */,
+				984FB0AA262B524200F745D7 /* Events */,
+				984FB0A9262B523F00F745D7 /* Teachers */,
+				984FB0A8262B523900F745D7 /* SUMap */,
+				984FB0A7262B523600F745D7 /* Appearance */,
+				984FB0AB262B528200F745D7 /* Settings.storyboard */,
 				984052F325F2CACD00BB719B /* SettingsViewController.swift */,
 				9800265725FCB1A6003AB272 /* SettingsTableViewCell.swift */,
 				98A2BD4C25FD378E006DF79D /* SwitchTableViewCell.swift */,
 			);
 			path = settings;
+			sourceTree = "<group>";
+		};
+		984FB0A5262B521B00F745D7 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				984FB0AE262B52EF00F745D7 /* NotificationsViewController.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		984FB0A7262B523600F745D7 /* Appearance */ = {
+			isa = PBXGroup;
+			children = (
+				984FB0BA262B532E00F745D7 /* AppearanceViewController.swift */,
+			);
+			path = Appearance;
+			sourceTree = "<group>";
+		};
+		984FB0A8262B523900F745D7 /* SUMap */ = {
+			isa = PBXGroup;
+			children = (
+				984FB0B7262B532100F745D7 /* SUMapViewController.swift */,
+			);
+			path = SUMap;
+			sourceTree = "<group>";
+		};
+		984FB0A9262B523F00F745D7 /* Teachers */ = {
+			isa = PBXGroup;
+			children = (
+				984FB0B4262B531100F745D7 /* TeachersViewController.swift */,
+			);
+			path = Teachers;
+			sourceTree = "<group>";
+		};
+		984FB0AA262B524200F745D7 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				984FB0B1262B530800F745D7 /* EventsViewController.swift */,
+			);
+			path = Events;
 			sourceTree = "<group>";
 		};
 		98C7276F25F13AB500D56261 = {
@@ -186,6 +244,7 @@
 				98C7278825F13AB600D56261 /* LaunchScreen.storyboard in Resources */,
 				98C7278525F13AB600D56261 /* Assets.xcassets in Resources */,
 				98C7278325F13AB500D56261 /* Main.storyboard in Resources */,
+				984FB0AC262B528200F745D7 /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,14 +255,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				984FB0AF262B52EF00F745D7 /* NotificationsViewController.swift in Sources */,
 				984052F025F2CAA300BB719B /* ScheduleViewController.swift in Sources */,
 				98A2BD4D25FD378E006DF79D /* SwitchTableViewCell.swift in Sources */,
 				98C7278025F13AB500D56261 /* ViewController.swift in Sources */,
 				9804332525F2C768005EDEEF /* TabbarController.swift in Sources */,
+				984FB0B8262B532100F745D7 /* SUMapViewController.swift in Sources */,
+				984FB0B5262B531100F745D7 /* TeachersViewController.swift in Sources */,
+				984FB0BB262B532E00F745D7 /* AppearanceViewController.swift in Sources */,
 				98C7277C25F13AB500D56261 /* AppDelegate.swift in Sources */,
 				9800265825FCB1A6003AB272 /* SettingsTableViewCell.swift in Sources */,
 				98C7277E25F13AB500D56261 /* SceneDelegate.swift in Sources */,
 				984052F425F2CACD00BB719B /* SettingsViewController.swift in Sources */,
+				984FB0B2262B530800F745D7 /* EventsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
