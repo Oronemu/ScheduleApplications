@@ -9,7 +9,7 @@ import currentWeekNumber from 'current-week-number';
 
 // components
 import Table from './components/Table/Table';
-
+import SelectDay from './components/SelectDay/SelectDay';
 
 export class App extends Component {
   constructor(props) {
@@ -19,7 +19,14 @@ export class App extends Component {
       wChoice: false,
       lessons: [],
       selectedDay: 1
-    }
+    };
+    this.groupHandler = this.groupHandler.bind(this);
+    this.weekHandler = this.weekHandler.bind(this);
+    this.dayHandler1 = this.dayHandler1.bind(this);
+    this.dayHandler2 = this.dayHandler2.bind(this);
+    this.dayHandler3 = this.dayHandler3.bind(this);
+    this.dayHandler4 = this.dayHandler4.bind(this);
+    this.dayHandler5 = this.dayHandler5.bind(this);
   }
 
   componentDidMount() { 
@@ -53,9 +60,28 @@ export class App extends Component {
       return { wChoice: !prevState.wChoice }
     })
   }
+
+  // still doesn't work in a singular function lmao
+  dayHandler1 = (event) => {
+    this.setState({ selectedDay: 1 })
+  }
+  dayHandler2 = (event) => {
+    this.setState({ selectedDay: 2 })
+  }
+  dayHandler3 = (event) => {
+    this.setState({ selectedDay: 3 })
+  }
+  dayHandler4 = (event) => {
+    this.setState({ selectedDay: 4 })
+  }
+  dayHandler5 = (event) => {
+    this.setState({ selectedDay: 5 })
+  }
+
   render() {
     return (
       <View>
+        <SelectDay choose1={this.dayHandler1} choose2={this.dayHandler2} choose3={this.dayHandler3} choose4={this.dayHandler4} choose5={this.dayHandler5} />
         <Table data={this.state.lessons} group={this.state.gChoice} week={this.state.wChoice} days={this.state.selectedDay} />
         <StatusBar style="auto" />
       </View>

@@ -8,6 +8,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.4",
     "current-week-number": "^1.0.7",
     "expo": "~41.0.1",
     "expo-status-bar": "~1.0.4",
