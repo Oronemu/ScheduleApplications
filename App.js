@@ -10,6 +10,8 @@ import currentWeekNumber from 'current-week-number';
 // components
 import Table from './components/Table/Table';
 import SelectDay from './components/SelectDay/SelectDay';
+import GroupSwitch from './components/SchSwitch/groupSwitch'
+import WeekSwitch from './components/SchSwitch/weekSwitch'
 
 export class App extends Component {
   constructor(props) {
@@ -81,6 +83,8 @@ export class App extends Component {
   render() {
     return (
       <View>
+        1 гр. <GroupSwitch onChange={this.groupHandler} groupChoice={this.state.gChoice} /> 2гр. <br></br>
+        чёт. <WeekSwitch onChange={this.weekHandler} weekChoice={this.state.wChoice} /> нечёт.
         <SelectDay choose1={this.dayHandler1} choose2={this.dayHandler2} choose3={this.dayHandler3} choose4={this.dayHandler4} choose5={this.dayHandler5} />
         <Table data={this.state.lessons} group={this.state.gChoice} week={this.state.wChoice} days={this.state.selectedDay} />
         <StatusBar style="auto" />
