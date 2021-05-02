@@ -1,15 +1,16 @@
 import React from 'react';
-import Switch from '@material-ui/core/Switch';
+import { Switch } from 'react-native-paper';
 
 const GroupSwitch = (props) => {
   return (
     <Switch
-      checked={props.groupChoice}
-      onChange={props.onChange}
+      value={props.groupChoice}
+      onValueChange={props.onChange}
       name="groupChoice"
-      inputProps={{ 'aria-label': 'group checkbox' }}
     />
   );
 };
-
+    
+// inputProps={{ 'aria-label': 'group checkbox' }}
 export default GroupSwitch;
+// module.exports = GroupSwitch;

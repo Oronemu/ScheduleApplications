@@ -1,15 +1,15 @@
 import React from 'react';
-import Switch from '@material-ui/core/Switch';
+import { Switch } from 'react-native-paper';
 
 const WeekSwitch = (props) => {
   return (
     <Switch
-      checked={props.weekChoice}
-      onChange={props.onChange}
+      value={props.weekChoice}
+      onValueChange={props.onChange}
       name="weekChoice"
-      inputProps={{ 'aria-label': 'week checkbox' }}
     />
   );
 };
 
 export default WeekSwitch;
+// module.exports = WeekSwitch;

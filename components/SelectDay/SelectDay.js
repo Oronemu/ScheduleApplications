@@ -1,17 +1,19 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
-import ButtonGroup from '@material-ui/core/ButtonGroup';
+import { View, Text  } from 'react-native';
+import { Button } from 'react-native-paper';
 
 export default function SelectDay(props) {
   return (
-    <div className="buttons" >
-      <ButtonGroup variant="contained" color="primary" aria-label="contained primary button group">
-        <Button onClick={props.choose1}>ПН</Button>
-        <Button onClick={props.choose2}>ВТ</Button>
-        <Button onClick={props.choose3}>СР</Button>
-        <Button onClick={props.choose4}>ЧТ</Button>
-        <Button onClick={props.choose5}>ПТ</Button>
-      </ButtonGroup>
-    </div>
+    <View className="buttons" >
+      <Button mode="contained" onPress={props.choose1}><Text>ПН</Text></Button>
+      <Button mode="contained" onPress={props.choose2}><Text>ВТ</Text></Button>
+      <Button mode="contained" onPress={props.choose3}><Text>СР</Text></Button>
+      <Button mode="contained" onPress={props.choose4}><Text>ЧТ</Text></Button>
+      <Button mode="contained" onPress={props.choose5}><Text>ПТ</Text></Button>
+    </View>
   );
 }
+
+
+// <ButtonGroup variant="contained" color="primary" aria-label="contained primary button group"></ButtonGroup>
+// module.exports = SelectDay;

@@ -6,6 +6,7 @@ import firebase from 'firebase';
 import 'firebase/firestore';
 import apiKeys from './config/keys';
 import currentWeekNumber from 'current-week-number';
+import { Provider as PaperProvider } from 'react-native-paper';
 
 // components
 import Table from './components/Table/Table';
@@ -82,14 +83,18 @@ export class App extends Component {
 
   render() {
     return (
-      <View>
-        1 гр. <GroupSwitch onChange={this.groupHandler} groupChoice={this.state.gChoice} /> 2гр. <br></br>
-        чёт. <WeekSwitch onChange={this.weekHandler} weekChoice={this.state.wChoice} /> нечёт.
-        <SelectDay choose1={this.dayHandler1} choose2={this.dayHandler2} choose3={this.dayHandler3} choose4={this.dayHandler4} choose5={this.dayHandler5} />
-        <Table data={this.state.lessons} group={this.state.gChoice} week={this.state.wChoice} days={this.state.selectedDay} />
-        <StatusBar style="auto" />
-      </View>
-    );
+      <Provider>
+        <View>
+          <Text>1 гр. </Text><GroupSwitch onValueChange={this.groupHandler} value={this.state.gChoice} /><Text> 2гр.</Text>
+        </View>
+        <View>
+          <Text>чёт. </Text><WeekSwitch onValueChange={this.weekHandler} value={this.state.wChoice} /><Text> нечёт.</Text>
+          <SelectDay choose1={this.dayHandler1} choose2={this.dayHandler2} choose3={this.dayHandler3} choose4={this.dayHandler4} choose5={this.dayHandler5} />
+          <Table data={this.state.lessons} group={this.state.gChoice} week={this.state.wChoice} days={this.state.selectedDay} />
+          <StatusBar style="auto" />
+        </View>
+      </Provider>
+    ); 
   }
 
 }
