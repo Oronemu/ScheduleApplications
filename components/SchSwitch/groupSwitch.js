@@ -4,8 +4,8 @@ import { Switch } from 'react-native-paper';
 const GroupSwitch = (props) => {
   return (
     <Switch
-      value={props.groupChoice}
-      onValueChange={props.onChange}
+      value={props.value}
+      onValueChange={props.onValueChange}
       name="groupChoice"
     />
   );

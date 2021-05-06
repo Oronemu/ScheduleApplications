@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet , View} from 'react-native';
+import { StyleSheet , Text, View } from 'react-native';
 // import './Table.css'
 
 const Table = (props) => {
@@ -9,31 +9,31 @@ const Table = (props) => {
     (props.week) ? wCh = 'odd' : wCh = 'even';
     if ((gCh === lesson.group || lesson.group === 0) && (wCh === lesson.week || lesson.week === 'all') && (props.days === lesson.day)) {
       return (
-        <View className="singularLesson" key={index}>
-          <table>
-            <tr>
-              <td type={lesson.type}>{lesson.start_time}</td>
-              <td>{lesson.title}</td>
-            </tr>
-            <tr>
-              <td type={lesson.type}>{lesson.end_time}</td>
-              <td>{lesson.type}</td>
-            </tr>
-            <tr>
-              <td type={lesson.type}>{"Ауд. " + lesson.cabinet}</td>
-              <td>{lesson.surname} {lesson.name.charAt(0)}.{lesson.patronymical.charAt(0)}.</td>
-            </tr>
-          </table>
+        <View className="singularLesson" style={{ justifyContent: "space-around", marginVertical: 50, marginHorizontal: 30 }} >
+          <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', marginBottom: 30}}>
+            <View style={{ flex: 1, alignSelf: 'stretch', flexDirection: 'row' , marginBottom: 30}}>
+              <View type={lesson.type} style={{ flex: 2, alignSelf: 'stretch' }} ><Text>{lesson.start_time}</Text></View>
+              <View style={{ flex: 3, alignSelf: 'stretch' }} ><Text>{lesson.title}</Text></View>
+            </View>
+            <View style={{ flex: 1, alignSelf: 'stretch', flexDirection: 'row', marginBottom: 30 }}>
+              <View type={lesson.type} style={{ flex: 2, alignSelf: 'stretch' }} ><Text>{lesson.end_time}</Text></View>
+              <View style={{ flex: 3, alignSelf: 'stretch' }} ><Text>{lesson.type}</Text></View>
+            </View>
+            <View style={{ flex: 1, alignSelf: 'stretch', flexDirection: 'row', marginBottom: 30 }}>
+              <View type={lesson.type} style={{ flex: 2, alignSelf: 'stretch' }} ><Text>{"Ауд. " + lesson.cabinet}</Text></View>
+              <View style={{ flex: 3, alignSelf: 'stretch' }} ><Text>{lesson.surname} {lesson.name.charAt(0)}.{lesson.patronymical.charAt(0)}.</Text></View>
+            </View>
+          </View>
         </View> 
       )
     } else {
-      return null;
+      return null;  
     }
   }) : null;
 
   return(
-    <View className="tableWrapper">
-    {listItems}
+    <View className="tableWrapper" style={{ marginTop: 20}} >
+      {listItems}
     </View>
   )
 }

@@ -83,17 +83,17 @@ export class App extends Component {
 
   render() {
     return (
-      <Provider>
-        <View>
-          <Text>1 гр. </Text><GroupSwitch onValueChange={this.groupHandler} value={this.state.gChoice} /><Text> 2гр.</Text>
+      <PaperProvider>
+        <SelectDay choose1={this.dayHandler1} choose2={this.dayHandler2} choose3={this.dayHandler3} choose4={this.dayHandler4} choose5={this.dayHandler5} />
+        <View style={{ alignItems: 'center', marginBottom: 20 }} >
+          <Text>1 гр. <GroupSwitch onValueChange={this.groupHandler} value={this.state.gChoice} /> 2гр.</Text>
+          <Text>чёт. <WeekSwitch onValueChange={this.weekHandler} value={this.state.wChoice} /> нечёт.</Text>
         </View>
         <View>
-          <Text>чёт. </Text><WeekSwitch onValueChange={this.weekHandler} value={this.state.wChoice} /><Text> нечёт.</Text>
-          <SelectDay choose1={this.dayHandler1} choose2={this.dayHandler2} choose3={this.dayHandler3} choose4={this.dayHandler4} choose5={this.dayHandler5} />
           <Table data={this.state.lessons} group={this.state.gChoice} week={this.state.wChoice} days={this.state.selectedDay} />
           <StatusBar style="auto" />
         </View>
-      </Provider>
+      </PaperProvider>
     ); 
   }
 
