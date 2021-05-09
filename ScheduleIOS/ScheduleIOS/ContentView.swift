@@ -1,40 +1,39 @@
 import SwiftUI
 
-struct option:Identifiable {
+struct lesson:Identifiable {
     var id = UUID()
+    var time:String
     var name:String
-    var image:String
 }
 
-struct optionsList:View {
-    var option:option
+struct lessonList:View {
+    var lesson:lesson
     
     var body: some View {
-        Text(option.name)
-        Spacer()
-        Image(systemName: option.image)
-            .font(.title2)
-            .foregroundColor(.white)
-            .frame(width: 40, height: 40, alignment: .center)
-            .background(Color.init(#colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)))
-            .clipShape(RoundedRectangle(cornerRadius: 10))
+        Text(lesson.time)
+            .padding(.trailing,100)
+            .multilineTextAlignment(.center)
+        Text(lesson.name)
     }
 }
 
 struct ContentView: View {
     var body: some View {
-        let optionArray = [
-            option(name: "Уведомления", image: "bell"),
-            option(name: "Учителя", image: "graduationcap"),
-            option(name: "Карта ВУЗа", image: "map"),
-            option(name: "Внешний вид", image: "iphone"),
+         let optionArray = [
+            lesson(time: "9:45", name: "БЖД"),
+            lesson(time: "11:20", name: "Практика"),
+            lesson(time: "Ауд. 5119", name: "Ефимов Д.А.")
         ]
         
         TabView {
             //--------Расписание--------//
             NavigationView {
                 Form {
-                    
+                    Section(header: Text("")) {
+                        List(optionArray) {
+                            lesson in lessonList(lesson: lesson)
+                        }
+                    }
                 }.navigationBarTitle(Text("Расписание"), displayMode: .inline)
             }.tabItem {
                 Image(systemName: "book")
@@ -42,14 +41,16 @@ struct ContentView: View {
             }
             //--------Настройки--------//
             NavigationView {
-                Form {
-                    Section(header: Text("Кнопочки")) {
-                        List(optionArray) {
-                            option in optionsList(option: option)
-                            
-                        }
-                    }
-                }.navigationBarTitle(Text("Расписание"), displayMode: .inline)
+                VStack {
+                    Text("В разработке")
+                        .font(.largeTitle)
+                        .foregroundColor(.gray)
+                    Text("Когда-то здесь будет меню настроек, нужно просто подождать...")
+                        .padding(10)
+                        .font(.body)
+                        .foregroundColor(.gray)
+                        .multilineTextAlignment(.center)
+                }
             }.tabItem {
                 Image(systemName: "gearshape")
                 Text("Настройки")
@@ -61,6 +62,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-        //.preferredColorScheme(.dark)
+      //  ContentView()
+      //      .preferredColorScheme(.dark)
     }
 }
