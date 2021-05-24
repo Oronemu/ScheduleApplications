@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		3685DF2274E7FD5A1C65819B /* Pods_ScheduleIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4329020FE933AB7BE6CD305F /* Pods_ScheduleIOS.framework */; };
+		984A523626712E8F00443C49 /* MainSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984A523526712E8F00443C49 /* MainSettings.swift */; };
 		98BCD6D1266A6DA500C68049 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BCD6D0266A6DA500C68049 /* AppDelegate.swift */; };
 		98BCD6D3266A6DA500C68049 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BCD6D2266A6DA500C68049 /* SceneDelegate.swift */; };
 		98BCD6D5266A6DA500C68049 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BCD6D4266A6DA500C68049 /* ContentView.swift */; };
@@ -21,6 +22,7 @@
 		1090463AD2E5494318ED147F /* Pods-ScheduleIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScheduleIOS.release.xcconfig"; path = "Target Support Files/Pods-ScheduleIOS/Pods-ScheduleIOS.release.xcconfig"; sourceTree = "<group>"; };
 		22A49D7A0877111F46525697 /* Pods-ScheduleIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScheduleIOS.debug.xcconfig"; path = "Target Support Files/Pods-ScheduleIOS/Pods-ScheduleIOS.debug.xcconfig"; sourceTree = "<group>"; };
 		4329020FE933AB7BE6CD305F /* Pods_ScheduleIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScheduleIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		984A523526712E8F00443C49 /* MainSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSettings.swift; sourceTree = "<group>"; };
 		98BCD6CD266A6DA500C68049 /* ScheduleIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScheduleIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98BCD6D0266A6DA500C68049 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98BCD6D2266A6DA500C68049 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,7 +60,6 @@
 				22A49D7A0877111F46525697 /* Pods-ScheduleIOS.debug.xcconfig */,
 				1090463AD2E5494318ED147F /* Pods-ScheduleIOS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -86,6 +87,7 @@
 				98BCD6D0266A6DA500C68049 /* AppDelegate.swift */,
 				98BCD6D2266A6DA500C68049 /* SceneDelegate.swift */,
 				98BCD6D4266A6DA500C68049 /* ContentView.swift */,
+				984A523526712E8F00443C49 /* MainSettings.swift */,
 				98BCD6D6266A6DAC00C68049 /* Assets.xcassets */,
 				98BCD6DB266A6DAC00C68049 /* LaunchScreen.storyboard */,
 				98BCD6DE266A6DAC00C68049 /* Info.plist */,
@@ -221,6 +223,7 @@
 				98BCD6D1266A6DA500C68049 /* AppDelegate.swift in Sources */,
 				98BCD6D3266A6DA500C68049 /* SceneDelegate.swift in Sources */,
 				98BCD6D5266A6DA500C68049 /* ContentView.swift in Sources */,
+				984A523626712E8F00443C49 /* MainSettings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
