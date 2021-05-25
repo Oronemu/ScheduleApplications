@@ -1,15 +1,18 @@
 package com.itdungeon.scheduleapp
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Window
 import android.widget.Button
 import android.widget.Switch
+import android.widget.TableLayout
 import android.widget.TextView
-
+import androidx.core.view.isVisible
 
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
@@ -44,22 +47,348 @@ class MainActivity : AppCompatActivity() {
         val fourthLessonCabinet:TextView = findViewById(R.id.textView23)
         val fourthLessonTeacher:TextView = findViewById(R.id.textView24)
 
-        val mondayButton:Button = findViewById(R.id.button13)
-        val thuButton:Button = findViewById(R.id.button14)
+        val thirdLesson:TableLayout = findViewById(R.id.tableLayout3)
+        val fourthLesson:TableLayout = findViewById(R.id.tableLayout4)
 
+        val mondayButton:Button = findViewById(R.id.button13)
+        val tuesdayButton:Button = findViewById(R.id.button14)
+        val wednesdayButton:Button = findViewById(R.id.button15)
+        val thursdayButton:Button = findViewById(R.id.button16)
+        val fridayButton:Button = findViewById(R.id.button17)
+
+
+        val weekSwitch:androidx.appcompat.widget.SwitchCompat = findViewById(R.id.switch1)
+        val groupSwitch:androidx.appcompat.widget.SwitchCompat = findViewById(R.id.switch2)
 
         mondayButton.setOnClickListener{
             firstLessonStartTime.text = "9:45"
             firstLessonName.text = "ОБЖ"
-            firstLessonEndTime.text = "11:45"
+            firstLessonEndTime.text = "11:20"
             firstLessonType.text = "Практика"
             firstLessonCabinet.text = "Ауд. 5119"
             firstLessonTeacher.text = "Ефимов Д.А."
+
+            secondLessonStartTime.text = "11:45"
+            secondLessonName.text = "Ф-ра"
+            secondLessonEndTime.text = "13:20"
+            secondLessonType.text = "Практика"
+            secondLessonCabinet.text = "Ауд. тир"
+            secondLessonTeacher.text = "Тюкалова С.А."
+
+            thirdLessonStartTime.text = "13:30"
+            thirdLessonName.text = "Дискретная математика"
+            thirdLessonEndTime.text = "15:05"
+            thirdLessonType.text = "Практика"
+            thirdLessonCabinet.text = "5106"
+            thirdLessonTeacher.text = "Гутова С.Г."
+
+            fourthLessonStartTime.text = "15:30"
+            fourthLessonName.text = "Алгебра и геометрия"
+            fourthLessonEndTime.text = "17:05"
+            fourthLessonType.text = "Практика"
+            fourthLessonCabinet.text = "5106"
+            fourthLessonTeacher.text = "Медведев А.В."
+
+            thirdLesson.isVisible = true
+            fourthLesson.isVisible = true
+
+            weekSwitch.setOnCheckedChangeListener { CompatSwitch, isChecked ->
+                if (isChecked) {
+                    firstLessonStartTime.text = "9:45"
+                    firstLessonName.text = "ОБЖ"
+                    firstLessonEndTime.text = "11:20"
+                    firstLessonType.text = "Практика"
+                    firstLessonCabinet.text = "Ауд. 5119"
+                    firstLessonTeacher.text = "Ефимов Д.А."
+
+                    secondLessonStartTime.text = "11:45"
+                    secondLessonName.text = "Ф-ра"
+                    secondLessonEndTime.text = "13:20"
+                    secondLessonType.text = "Практика"
+                    secondLessonCabinet.text = "Ауд. тир"
+                    secondLessonTeacher.text = "Тюкалова С.А."
+
+                    thirdLessonStartTime.text = "13:30"
+                    thirdLessonName.text = "Дискретная математика"
+                    thirdLessonEndTime.text = "15:05"
+                    thirdLessonType.text = "Практика"
+                    thirdLessonCabinet.text = "5106"
+                    thirdLessonTeacher.text = "Гутова С.Г."
+
+                    fourthLessonStartTime.text = "15:30"
+                    fourthLessonName.text = "Алгебра и геометрия"
+                    fourthLessonEndTime.text = "17:05"
+                    fourthLessonType.text = "Практика"
+                    fourthLessonCabinet.text = "Ауд. 5106"
+                    fourthLessonTeacher.text = "Медведев А.В."
+
+                    thirdLesson.isVisible = true
+                    fourthLesson.isVisible = true
+                } else {
+                    firstLessonStartTime.text = "9:45"
+                    firstLessonName.text = "ОБЖ"
+                    firstLessonEndTime.text = "11:20"
+                    firstLessonType.text = "Практика"
+                    firstLessonCabinet.text = "Ауд. 5119"
+                    firstLessonTeacher.text = "Ефимов Д.А."
+
+                    secondLessonStartTime.text = "11:45"
+                    secondLessonName.text = "Ф-ра"
+                    secondLessonEndTime.text = "13:20"
+                    secondLessonType.text = "Практика"
+                    secondLessonCabinet.text = "Ауд. тир"
+                    secondLessonTeacher.text = "Тюкалова С.А."
+
+                    thirdLessonStartTime.text = "13:30"
+                    thirdLessonName.text = "Дискретная математика"
+                    thirdLessonEndTime.text = "15:05"
+                    thirdLessonType.text = "Практика"
+                    thirdLessonCabinet.text = "5106"
+                    thirdLessonTeacher.text = "Гутова С.Г."
+
+                    fourthLessonStartTime.text = "15:30"
+                    fourthLessonName.text = "Алгебра и геометрия"
+                    fourthLessonEndTime.text = "17:05"
+                    fourthLessonType.text = "Практика"
+                    fourthLessonCabinet.text = "Ауд. 5106"
+                    fourthLessonTeacher.text = "Медведев А.В."
+
+                    thirdLesson.isVisible = true
+                    fourthLesson.isVisible = true
+                }
+            }
         }
 
-        thuButton.setOnClickListener{
-            firstLessonStartTime.text = "15.30"
+
+        tuesdayButton.setOnClickListener{
+            firstLessonStartTime.text = "13:30"
+            firstLessonName.text = "Операционные системы"
+            firstLessonEndTime.text = "15:05"
+            firstLessonType.text = "Практика"
+            firstLessonCabinet.text = "Ауд. 2226"
+            firstLessonTeacher.text = "Стуколов С.В."
+
+            secondLessonStartTime.text = "15:30"
+            secondLessonName.text = "Алгебра и геометрия"
+            secondLessonEndTime.text = "17:05"
+            secondLessonType.text = "Лекция"
+            secondLessonCabinet.text = "Ауд. 2226"
+            secondLessonTeacher.text = "Медведев А.В."
+
+            thirdLessonStartTime.text = "17:15"
+            thirdLessonName.text = "Математический анализ"
+            thirdLessonEndTime.text = "18:50"
+            thirdLessonType.text = "Лекция"
+            thirdLessonCabinet.text = "Ауд. 2226"
+            thirdLessonTeacher.text = "Чуешев А.В."
+
+            thirdLesson.isVisible = true
+            fourthLesson.isVisible = false
+            weekSwitch.setOnCheckedChangeListener { CompatSwitch, isChecked ->
+                if (isChecked) {
+                    firstLessonStartTime.text = "13:30"
+                    firstLessonName.text = "Операционные системы"
+                    firstLessonEndTime.text = "15:05"
+                    firstLessonType.text = "Практика"
+                    firstLessonCabinet.text = "Ауд. 2226"
+                    firstLessonTeacher.text = "Стуколов С.В."
+
+                    secondLessonStartTime.text = "15:30"
+                    secondLessonName.text = "Алгебра и геометрия"
+                    secondLessonEndTime.text = "17:05"
+                    secondLessonType.text = "Лекция"
+                    secondLessonCabinet.text = "Ауд. 2226"
+                    secondLessonTeacher.text = "Медведев А.В."
+
+                    thirdLessonStartTime.text = "17:15"
+                    thirdLessonName.text = "Математический анализ"
+                    thirdLessonEndTime.text = "18:50"
+                    thirdLessonType.text = "Лекция"
+                    thirdLessonCabinet.text = "Ауд. 2226"
+                    thirdLessonTeacher.text = "Чуешев А.В."
+
+                    thirdLesson.isVisible = true
+                    fourthLesson.isVisible = false
+                }else{
+                    firstLessonStartTime.text = "13:30"
+                    firstLessonName.text = "Операционные системы"
+                    firstLessonEndTime.text = "15:05"
+                    firstLessonType.text = "Практика"
+                    firstLessonCabinet.text = "Ауд. 2226"
+                    firstLessonTeacher.text = "Стуколов С.В."
+
+                    secondLessonStartTime.text = "15:30"
+                    secondLessonName.text = "Алгебра и геометрия"
+                    secondLessonEndTime.text = "17:05"
+                    secondLessonType.text = "Лекция"
+                    secondLessonCabinet.text = "Ауд. 2226"
+                    secondLessonTeacher.text = "Медведев А.В."
+
+                    thirdLessonStartTime.text = "17:15"
+                    thirdLessonName.text = "Математический анализ"
+                    thirdLessonEndTime.text = "18:50"
+                    thirdLessonType.text = "Лекция"
+                    thirdLessonCabinet.text = "Ауд. 2226"
+                    thirdLessonTeacher.text = "Чуешев А.В."
+
+                    thirdLesson.isVisible = true
+                    fourthLesson.isVisible = false
+                }
+            }
         }
+
+        wednesdayButton.setOnClickListener{
+            firstLessonStartTime.text = "11:45"
+            firstLessonName.text = "Операционные системы"
+            firstLessonEndTime.text = "13:20"
+            firstLessonType.text = "Лекция"
+            firstLessonCabinet.text = "Ауд. 5 бл."
+            firstLessonTeacher.text = "Рейн Т.С."
+
+            secondLessonStartTime.text = "13:30"
+            secondLessonName.text = "Языки программирования"
+            secondLessonEndTime.text = "15:05"
+            secondLessonType.text = "Лекция"
+            secondLessonCabinet.text = "Ауд. 5 бл."
+            secondLessonTeacher.text = "Иванов К.С."
+
+            thirdLessonStartTime.text = "15:30"
+            thirdLessonName.text = "Дискретная математика"
+            thirdLessonEndTime.text = "17:05"
+            thirdLessonType.text = "Лекция"
+            thirdLessonCabinet.text = "Ауд. 5 бл."
+            thirdLessonTeacher.text = "Гутова С.Г."
+
+            thirdLesson.isVisible = true
+            fourthLesson.isVisible = false
+            weekSwitch.setOnCheckedChangeListener { CompatSwitch, isChecked ->
+                if (isChecked) {
+                    firstLessonStartTime.text = "11:45"
+                    firstLessonName.text = "Операционные системы"
+                    firstLessonEndTime.text = "13:20"
+                    firstLessonType.text = "Лекция"
+                    firstLessonCabinet.text = "Ауд. 5 бл."
+                    firstLessonTeacher.text = "Рейн Т.С."
+
+                    secondLessonStartTime.text = "13:30"
+                    secondLessonName.text = "Языки программирования"
+                    secondLessonEndTime.text = "15:05"
+                    secondLessonType.text = "Лекция"
+                    secondLessonCabinet.text = "Ауд. 5 бл."
+                    secondLessonTeacher.text = "Иванов К.С."
+
+                    thirdLessonStartTime.text = "15:30"
+                    thirdLessonName.text = "ОБЖ"
+                    thirdLessonEndTime.text = "17:05"
+                    thirdLessonType.text = "Лекция"
+                    thirdLessonCabinet.text = "Ауд. 2 бл."
+                    thirdLessonTeacher.text = "Ефимов Д.А."
+
+                    thirdLesson.isVisible = true
+                    fourthLesson.isVisible = false
+                }else{
+                    firstLessonStartTime.text = "11:45"
+                    firstLessonName.text = "Операционные системы"
+                    firstLessonEndTime.text = "13:20"
+                    firstLessonType.text = "Лекция"
+                    firstLessonCabinet.text = "Ауд. 5 бл."
+                    firstLessonTeacher.text = "Рейн Т.С."
+
+                    secondLessonStartTime.text = "13:30"
+                    secondLessonName.text = "Языки программирования"
+                    secondLessonEndTime.text = "15:05"
+                    secondLessonType.text = "Лекция"
+                    secondLessonCabinet.text = "Ауд. 5 бл."
+                    secondLessonTeacher.text = "Иванов К.С."
+
+                    thirdLessonStartTime.text = "15:30"
+                    thirdLessonName.text = "Дискретная математика"
+                    thirdLessonEndTime.text = "17:05"
+                    thirdLessonType.text = "Лекция"
+                    thirdLessonCabinet.text = "Ауд. 5 бл."
+                    thirdLessonTeacher.text = "Гутова С.Г."
+
+                    thirdLesson.isVisible = true
+                    fourthLesson.isVisible = false
+                }
+            }
+        }
+
+        thursdayButton.setOnClickListener{
+            firstLessonStartTime.text = "11:45"
+            firstLessonName.text = "Математический анализ"
+            firstLessonEndTime.text = "13:20"
+            firstLessonType.text = "Практика"
+            firstLessonCabinet.text = "Ауд. 5204"
+            firstLessonTeacher.text = "Чуешев А.В."
+
+            secondLessonStartTime.text = "13:30"
+            secondLessonName.text = "Ф-ра"
+            secondLessonEndTime.text = "15:05"
+            secondLessonType.text = "Практика"
+            secondLessonCabinet.text = "Ауд. тир"
+            secondLessonTeacher.text = "Тюкалова С.А."
+
+            thirdLesson.isVisible = false
+            fourthLesson.isVisible = false
+            weekSwitch.setOnCheckedChangeListener { CompatSwitch, isChecked ->
+                if (isChecked) {
+                    firstLessonStartTime.text = "11:45"
+                    firstLessonName.text = "Математический анализ"
+                    firstLessonEndTime.text = "13:20"
+                    firstLessonType.text = "Практика"
+                    firstLessonCabinet.text = "Ауд. 5204"
+                    firstLessonTeacher.text = "Чуешев А.В."
+
+                    secondLessonStartTime.text = "13:30"
+                    secondLessonName.text = "Ф-ра"
+                    secondLessonEndTime.text = "15:05"
+                    secondLessonType.text = "Практика"
+                    secondLessonCabinet.text = "Ауд. тир"
+                    secondLessonTeacher.text = "Тюкалова С.А."
+
+                    thirdLesson.isVisible = false
+                    fourthLesson.isVisible = false
+                }else{
+                    firstLessonStartTime.text = "11:45"
+                    firstLessonName.text = "Математический анализ"
+                    firstLessonEndTime.text = "13:20"
+                    firstLessonType.text = "Практика"
+                    firstLessonCabinet.text = "Ауд. 5204"
+                    firstLessonTeacher.text = "Чуешев А.В."
+
+                    secondLessonStartTime.text = "13:30"
+                    secondLessonName.text = "Ф-ра"
+                    secondLessonEndTime.text = "15:05"
+                    secondLessonType.text = "Практика"
+                    secondLessonCabinet.text = "Ауд. тир"
+                    secondLessonTeacher.text = "Тюкалова С.А."
+
+                    thirdLesson.isVisible = false
+                    fourthLesson.isVisible = false
+                }
+            }
+        }
+
+        fridayButton.setOnClickListener {
+            firstLessonStartTime.text = "11:45"
+            firstLessonName.text = "Иностранный язык"
+            firstLessonEndTime.text = "13:20"
+            firstLessonType.text = "Практика"
+            firstLessonCabinet.text = "Ауд. 2218"
+            firstLessonTeacher.text = "Перевалова А.А."
+
+            secondLessonStartTime.text = "13:30"
+            secondLessonName.text = "Языки программирования"
+            secondLessonEndTime.text = "15:05"
+            secondLessonType.text = "Практика"
+            secondLessonCabinet.text = "Ауд. 2220"
+            secondLessonTeacher.text = "Иванов К.С."
+
+            thirdLesson.isVisible = false
+            fourthLesson.isVisible = false
+        }
+
     }
 
 }

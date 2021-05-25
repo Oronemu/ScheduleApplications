@@ -422,6 +422,7 @@
             android:layout_height="match_parent">
 
             <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch1"
                 android:layout_width="140dp"
                 android:layout_height="45dp"
                 android:gravity="right"
@@ -446,6 +447,7 @@
             android:layout_height="match_parent">
 
             <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch2"
                 android:layout_width="140dp"
                 android:layout_height="45dp"
                 android:gravity="right"
