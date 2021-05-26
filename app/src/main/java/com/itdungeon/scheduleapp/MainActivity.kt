@@ -1,6 +1,7 @@
 package com.itdungeon.scheduleapp
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Window
@@ -47,6 +48,34 @@ class MainActivity : AppCompatActivity() {
         val fourthLessonCabinet:TextView = findViewById(R.id.textView23)
         val fourthLessonTeacher:TextView = findViewById(R.id.textView24)
 
+        firstLessonStartTime.text = "9:45"
+        firstLessonName.text = "ОБЖ"
+        firstLessonEndTime.text = "11:20"
+        firstLessonType.text = "Практика"
+        firstLessonCabinet.text = "Ауд. 5119"
+        firstLessonTeacher.text = "Ефимов Д.А."
+
+        secondLessonStartTime.text = "11:45"
+        secondLessonName.text = "Ф-ра"
+        secondLessonEndTime.text = "13:20"
+        secondLessonType.text = "Практика"
+        secondLessonCabinet.text = "Ауд. тир"
+        secondLessonTeacher.text = "Тюкалова С.А."
+
+        thirdLessonStartTime.text = "13:30"
+        thirdLessonName.text = "Дискретная математика"
+        thirdLessonEndTime.text = "15:05"
+        thirdLessonType.text = "Практика"
+        thirdLessonCabinet.text = "5106"
+        thirdLessonTeacher.text = "Гутова С.Г."
+
+        fourthLessonStartTime.text = "15:30"
+        fourthLessonName.text = "Алгебра и геометрия"
+        fourthLessonEndTime.text = "17:05"
+        fourthLessonType.text = "Практика"
+        fourthLessonCabinet.text = "5106"
+        fourthLessonTeacher.text = "Медведев А.В."
+
         val thirdLesson:TableLayout = findViewById(R.id.tableLayout3)
         val fourthLesson:TableLayout = findViewById(R.id.tableLayout4)
 
@@ -60,7 +89,28 @@ class MainActivity : AppCompatActivity() {
         val weekSwitch:androidx.appcompat.widget.SwitchCompat = findViewById(R.id.switch1)
         val groupSwitch:androidx.appcompat.widget.SwitchCompat = findViewById(R.id.switch2)
 
-        mondayButton.setOnClickListener{
+        tuesdayButton.setOnClickListener {
+            val intent = Intent(this, MainActivity2::class.java)
+            startActivity(intent)
+        }
+
+        wednesdayButton.setOnClickListener {
+            val intent = Intent(this, MainActivity3::class.java)
+            startActivity(intent)
+        }
+
+        thursdayButton.setOnClickListener {
+            val intent = Intent(this, MainActivity4::class.java)
+            startActivity(intent)
+        }
+
+        fridayButton.setOnClickListener {
+            val intent = Intent(this, MainActivity5::class.java)
+            startActivity(intent)
+        }
+
+
+        /*mondayButton.setOnClickListener{
             firstLessonStartTime.text = "9:45"
             firstLessonName.text = "ОБЖ"
             firstLessonEndTime.text = "11:20"
@@ -91,6 +141,8 @@ class MainActivity : AppCompatActivity() {
 
             thirdLesson.isVisible = true
             fourthLesson.isVisible = true
+
+
 
             weekSwitch.setOnCheckedChangeListener { CompatSwitch, isChecked ->
                 if (isChecked) {
@@ -387,9 +439,92 @@ class MainActivity : AppCompatActivity() {
 
             thirdLesson.isVisible = false
             fourthLesson.isVisible = false
-        }
 
+            weekSwitch.setOnCheckedChangeListener { CompatSwitch, isChecked ->
+                if (isChecked) {
+                    firstLessonStartTime.text = "11:45"
+                    firstLessonName.text = "Иностранный язык"
+                    firstLessonEndTime.text = "13:20"
+                    firstLessonType.text = "Практика"
+                    firstLessonCabinet.text = "Ауд. 2218"
+                    firstLessonTeacher.text = "Перевалова А.А."
+
+                    secondLessonStartTime.text = "13:30"
+                    secondLessonName.text = "Языки программирования"
+                    secondLessonEndTime.text = "15:05"
+                    secondLessonType.text = "Практика"
+                    secondLessonCabinet.text = "Ауд. 2220"
+                    secondLessonTeacher.text = "Иванов К.С."
+
+                    thirdLesson.isVisible = false
+                    fourthLesson.isVisible = false
+                }else{
+                    firstLessonStartTime.text = "11:45"
+                    firstLessonName.text = "Иностранный язык"
+                    firstLessonEndTime.text = "13:20"
+                    firstLessonType.text = "Практика"
+                    firstLessonCabinet.text = "Ауд. 2218"
+                    firstLessonTeacher.text = "Перевалова А.А."
+
+                    secondLessonStartTime.text = "13:30"
+                    secondLessonName.text = "Языки программирования"
+                    secondLessonEndTime.text = "15:05"
+                    secondLessonType.text = "Практика"
+                    secondLessonCabinet.text = "Ауд. 2220"
+                    secondLessonTeacher.text = "Иванов К.С."
+
+                    thirdLesson.isVisible = false
+                    fourthLesson.isVisible = false
+                }
+
+                groupSwitch.setOnCheckedChangeListener { buttonView1, isChecked1 ->
+                    if(isChecked1){
+                        firstLessonStartTime.text = "9:45"
+                        firstLessonName.text = "Иностранный язык"
+                        firstLessonEndTime.text = "11:20"
+                        firstLessonType.text = "Практика"
+                        firstLessonCabinet.text = "Ауд. 2218"
+                        firstLessonTeacher.text = "Перевалова А.А."
+
+                        secondLessonStartTime.text = "11:45"
+                        secondLessonName.text = "Языки программирования"
+                        secondLessonEndTime.text = "13:20"
+                        secondLessonType.text = "Практика"
+                        secondLessonCabinet.text = "Ауд. 2220"
+                        secondLessonTeacher.text = "Иванов К.С."
+
+                        thirdLessonStartTime.text = "13:20"
+                        thirdLessonName.text = "Операционные системы"
+                        thirdLessonEndTime.text = "15:05"
+                        thirdLessonType.text = "Практика"
+                        thirdLessonCabinet.text = "Ауд. 2130Б"
+                        thirdLessonTeacher.text = "Зимин А.И."
+
+                        thirdLesson.isVisible = true
+                        fourthLesson.isVisible = false
+                    }else{
+                        firstLessonStartTime.text = "11:45"
+                        firstLessonName.text = "Иностранный язык"
+                        firstLessonEndTime.text = "13:20"
+                        firstLessonType.text = "Практика"
+                        firstLessonCabinet.text = "Ауд. 2218"
+                        firstLessonTeacher.text = "Перевалова А.А."
+
+                        secondLessonStartTime.text = "13:30"
+                        secondLessonName.text = "Языки программирования"
+                        secondLessonEndTime.text = "15:05"
+                        secondLessonType.text = "Практика"
+                        secondLessonCabinet.text = "Ауд. 2220"
+                        secondLessonTeacher.text = "Иванов К.С."
+
+                        thirdLesson.isVisible = false
+                        fourthLesson.isVisible = false
+
+
+                    }
+                }
+            }
+        }*/
     }
-
 }
 
