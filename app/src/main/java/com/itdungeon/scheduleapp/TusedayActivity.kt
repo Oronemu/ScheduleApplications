@@ -1,9 +1,6 @@
 package com.itdungeon.scheduleapp
 
 import android.content.Intent
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
-import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -11,13 +8,12 @@ import android.widget.TableLayout
 import android.widget.TextView
 import androidx.core.view.isVisible
 
-class MainActivity2 : AppCompatActivity() {
+class TusedayActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.tue)
+        setContentView(R.layout.tuesday)
 
         val mondayButton:Button = findViewById(R.id.button13)
-        val tuesdayButton:Button = findViewById(R.id.button14)
         val wednesdayButton:Button = findViewById(R.id.button15)
         val thursdayButton:Button = findViewById(R.id.button16)
         val fridayButton:Button = findViewById(R.id.button17)
@@ -52,7 +48,7 @@ class MainActivity2 : AppCompatActivity() {
         firstLessonEndTime.text = "15:05"
         firstLessonType.text = "Практика"
         firstLessonCabinet.setBackgroundResource(R.color.practic)
-        firstLessonCabinet.text = "Ауд. 2226"
+        firstLessonCabinet.text = "Ауд. 2220"
         firstLessonTeacher.text = "Стуколов С.В."
 
         secondLessonStartTime.text = "15:30"
@@ -75,22 +71,22 @@ class MainActivity2 : AppCompatActivity() {
         val groupSwitch:androidx.appcompat.widget.SwitchCompat = findViewById(R.id.switch2)
 
         mondayButton.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, MondayActivity::class.java)
             startActivity(intent)
         }
 
         wednesdayButton.setOnClickListener {
-            val intent = Intent(this, MainActivity3::class.java)
+            val intent = Intent(this, WednesdayActivity::class.java)
             startActivity(intent)
         }
 
         thursdayButton.setOnClickListener {
-            val intent = Intent(this, MainActivity4::class.java)
+            val intent = Intent(this, ThursdayActivity::class.java)
             startActivity(intent)
         }
 
         fridayButton.setOnClickListener {
-            val intent = Intent(this, MainActivity5::class.java)
+            val intent = Intent(this, FridayActivity::class.java)
             startActivity(intent)
         }
 
@@ -122,7 +118,7 @@ class MainActivity2 : AppCompatActivity() {
                 firstLessonEndTime.text = "15:05"
                 firstLessonType.text = "Практика"
                 firstLessonCabinet.setBackgroundResource(R.color.practic)
-                firstLessonCabinet.text = "Ауд. 2226"
+                firstLessonCabinet.text = "Ауд. 2220"
                 firstLessonTeacher.text = "Стуколов С.В."
 
                 secondLessonStartTime.text = "15:30"

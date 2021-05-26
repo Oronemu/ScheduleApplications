@@ -8,15 +8,14 @@ import android.widget.TableLayout
 import android.widget.TextView
 import androidx.core.view.isVisible
 
-class MainActivity4 : AppCompatActivity() {
+class ThursdayActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.th)
+        setContentView(R.layout.thursday)
 
         val mondayButton: Button = findViewById(R.id.button13)
         val tuesdayButton: Button = findViewById(R.id.button14)
         val wednesdayButton: Button = findViewById(R.id.button15)
-        val thursdayButton: Button = findViewById(R.id.button16)
         val fridayButton: Button = findViewById(R.id.button17)
 
         val firstLessonStartTime: TextView = findViewById(R.id.textView1)
@@ -61,22 +60,22 @@ class MainActivity4 : AppCompatActivity() {
         val weekSwitch:androidx.appcompat.widget.SwitchCompat = findViewById(R.id.switch1)
 
         mondayButton.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, MondayActivity::class.java)
             startActivity(intent)
         }
 
         tuesdayButton.setOnClickListener {
-            val intent = Intent(this, MainActivity2::class.java)
+            val intent = Intent(this, TusedayActivity::class.java)
             startActivity(intent)
         }
 
         wednesdayButton.setOnClickListener {
-            val intent = Intent(this, MainActivity3::class.java)
+            val intent = Intent(this, WednesdayActivity::class.java)
             startActivity(intent)
         }
 
         fridayButton.setOnClickListener {
-            val intent = Intent(this, MainActivity5::class.java)
+            val intent = Intent(this, FridayActivity::class.java)
             startActivity(intent)
         }
 
